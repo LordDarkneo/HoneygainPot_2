@@ -28,7 +28,7 @@ jobs:
             echo "value=1" >> $GITHUB_OUTPUT;
           fi
 
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - name: Run HoneygainPot (NEW)
         if: ${{ steps.IsJWT.outputs.available == 'true' }}
         run: python main.py
@@ -37,7 +37,7 @@ jobs:
           PASS: ${{ secrets.PASS }} # <- DO NOT enter your password here, it may leak your information
           JWT_TOKEN: ${{ secrets.JWT_TOKEN }} # <- DO NOT enter your JWT Token here, it may leak your information
           IsJWT: ${{ steps.IsJWTValue.outputs.value }} # DO NOT Touch THIS
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - name: Run HoneygainPot (OLD)
         if: ${{ steps.IsJWT.outputs.available != 'true' }}
         run: python main.py
