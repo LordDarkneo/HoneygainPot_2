@@ -41,21 +41,22 @@ if os.getenv('GITHUB_ACTIONS') == 'true':
     print(f"{colors.OKGREEN}Run with GitHub Actions: Yes{colors.ENDC}")
     print(f"{colors.WHITE}Current forked repo: {os.getenv('GITHUB_REPOSITORY')}{colors.ENDC}")
     user_repo = os.getenv('GITHUB_REPOSITORY')
-    ORIGINAL_REPO = 'gorouflex/HoneygainPot'
-    user_url = f'https://api.github.com/repos/{user_repo}/commits?path=main.py'
-    original_url = f'https://api.github.com/repos/{ORIGINAL_REPO}/commits?path=main.py'
-    user_response = requests.get(user_url, timeout=10000)
-    original_response = requests.get(original_url, timeout=10000)
-    if user_response.status_code == 200 and original_response.status_code == 200:
-        user_commit = user_response.json()[0]['sha']
-        original_commit = original_response.json()[0]['sha']
-        if user_commit == original_commit:
-            print(f"{colors.OKGREEN}Your repo is up-to-date with the original repo{colors.ENDC}")
-        else:
-            print(f"{colors.WARNING}Your repo is not up-to-date with the original repo{colors.ENDC}")
-            print(f"{colors.FAIL}Please update your repo to the latest commit{colors.ENDC}{colors.FAIL}to get new updates and bug fixes{colors.ENDC}")
-    else:
-        print(f"{colors.FAIL}❌ Error code 4: Failed to fetch commit information{colors.ENDC}")
+# Deactivate update check as source repo no longer exists
+#    ORIGINAL_REPO = 'gorouflex/HoneygainPot'
+#    user_url = f'https://api.github.com/repos/{user_repo}/commits?path=main.py'
+#    original_url = f'https://api.github.com/repos/{ORIGINAL_REPO}/commits?path=main.py'
+#    user_response = requests.get(user_url, timeout=10000)
+#    original_response = requests.get(original_url, timeout=10000)
+#    if user_response.status_code == 200 and original_response.status_code == 200:
+#        user_commit = user_response.json()[0]['sha']
+#        original_commit = original_response.json()[0]['sha']
+#        if user_commit == original_commit:
+#            print(f"{colors.OKGREEN}Your repo is up-to-date with the original repo{colors.ENDC}")
+#        else:
+#            print(f"{colors.WARNING}Your repo is not up-to-date with the original repo{colors.ENDC}")
+#            print(f"{colors.FAIL}Please update your repo to the latest commit{colors.ENDC}{colors.FAIL}to get new updates and bug fixes{colors.ENDC}")
+#    else:
+#        print(f"{colors.FAIL}❌ Error code 4: Failed to fetch commit information{colors.ENDC}")
 else:
     print(f"{colors.FAIL}Run with GitHub Actions: No{colors.ENDC}")
 is_jwt = config.get('User', 'IsJWT', fallback='0')
