@@ -1,4 +1,4 @@
-<picture><img align="left" src="[https://github.com/gorouflex/Sandy/blob/main/Img/HoneygainPot/SmallLogo.png]" width="20%"/></picture>
+<picture><img align="left" src="https://github.com/gorouflex/Sandy/blob/main/Img/HoneygainPot/SmallLogo.png" width="20%"/></picture>
 <h1>HoneygainPot - Project Sandy</h1>
 <h3>🐝 Automatically claim your Honeygain lucky pot every day 🍯</h3>
 <h4>Powered by GitHub Actions 🐙 and Python 🐍</h4>
