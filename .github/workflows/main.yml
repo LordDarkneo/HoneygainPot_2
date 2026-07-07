@@ -1,4 +1,3 @@
-name=main.yml url=https://github.com/LordDarkneo/HoneygainPot_2/blob/main/.github/workflows/main.yml
             - name: Setup Node.js environment
               uses: actions/setup-node@v4.0.1
               with:
