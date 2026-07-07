@@ -1,4 +1,5 @@
 <picture><img align="left" src="https://ml-eu.globenewswire.com/Resource/Download/114fff4f-e427-4cd5-bf95-6ffe2cf12958" width="20%"/></picture>
+<br>
 <h1>HoneygainPot - Project Sandy</h1>
 <h3>🐝 Automatically claim your Honeygain lucky pot every day 🍯</h3>
 <h4>Powered by GitHub Actions 🐙 and Python 🐍</h4>
